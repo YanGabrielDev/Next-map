@@ -9,7 +9,12 @@
     "lint": "eslint, src --max-warnings=0",
     "test": "jest",
     "test:watch": "npm run test --watch"
-
+  },
+  "lint-staged": {
+    "src/**/*":[
+      "npm run lint --fix",
+      "npm run test --findRelatedTests --bail"
+    ]
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.23.3",
