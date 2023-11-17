@@ -3,9 +3,6 @@ export default function Home() {
   const pla = "var"
   return (
     <main>
-     <div>
-
-      </div>
     </main>
   )
 }
