@@ -10,7 +10,7 @@ export default function RootLayout({
     <html>
       <body>
         <StyledComponentsRegistry>
-          <Providers>{children}</Providers>
+          {children}
         </StyledComponentsRegistry>
       </body>
     </html>
