@@ -6,12 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint, src --max-warnings=0",
+    "lint": "eslint src",
     "test": "jest",
     "test:watch": "npm run test --watch"
   },
   "lint-staged": {
-    "src/**/*":[
+    "src/**/*": [
       "npm run lint --fix",
       "npm run test --findRelatedTests --bail"
     ]
@@ -22,6 +22,7 @@
     "@testing-library/react": "^14.1.0",
     "@types/jest": "^29.5.8",
     "jest": "^29.7.0",
+    "jest-styled-components": "^7.2.0",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
