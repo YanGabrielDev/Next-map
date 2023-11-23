@@ -1,4 +1,5 @@
 import StyledComponentsRegistry from '../lib/registry'
+import 'leaflet/dist/leaflet.css'
 
 export default function RootLayout({
   children
@@ -10,7 +11,6 @@ export default function RootLayout({
       <head>
       </head>
       <body>
-
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
