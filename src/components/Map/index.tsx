@@ -9,7 +9,20 @@ const customIcon = new L.Icon({
   popupAnchor: [0, -32],
 });
 
-const Map = () => (
+interface Place{
+    id: string,
+    name: string,
+    slug: string,
+    location: {
+      latitude: number,
+      longitude: number
+    }
+}
+
+interface MapProps{
+  places?: Array<Place>
+}
+const Map = ({places}: MapProps) => (
     <MapContainer center={[0,0]} zoom={3} style={{
       height: '100vh',
       width: '100vw'
@@ -18,11 +31,12 @@ const Map = () => (
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={[0,0]} icon={customIcon}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-    </Marker>
+    {places?.map(({id, location, name}) => {
+     const {latitude, longitude} = location
+     return(
+    <Marker key={`place-${id}`} position={[latitude,longitude]} icon={customIcon} title={name}/>
+     )
+    })}
   </MapContainer>
   )
 
