@@ -6,15 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src",
+    "lint": "eslint . --fix",
+    "lint:fix": "eslint --fix",
     "test": "jest",
     "test:watch": "npm run test --watch"
-  },
-  "lint-staged": {
-    "src/**/*": [
-      "npm run lint --fix",
-      "npm run test --findRelatedTests --bail"
-    ]
   },
   "dependencies": {
     "jest": "^29.7.0",
@@ -45,7 +40,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest-environment-jsdom": "^29.7.0",
