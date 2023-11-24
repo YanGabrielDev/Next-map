@@ -7,5 +7,5 @@ module.exports = {
   modulePaths: ['<rootDir>/src/'],
   transformIgnorePatterns: [
     './node_modules/(?!(react-leaflet/lib|@react-leaflet/core/lib)/)'
-  ],
+  ]
 }

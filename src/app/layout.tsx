@@ -8,8 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <head>
-      </head>
+      <head></head>
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
